@@ -2,7 +2,7 @@ sc=0
 cont = 0
 c= "SI"
 
-while c != "NO":
+while c == "SI":
     nom = input("Ingrese el nombre del alumno: ")
     carr = input("Ingrese la carrera: ")
     c1 = float(input("Ingrese la calificacion parcial 1: "))
