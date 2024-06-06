@@ -98,24 +98,33 @@ Notas:
 2. utilizar listas para almacenar nombres de peliculas
 
 """
-from LlamarFunciones import *
+
+from FuncionPeliculas import *
 peliculas = []
 
-def buscar(lis, buscarPal):
-    for i in lis:
-        if buscarPal == i:
-            print(f"Si está la palabra {i}. Está en la posición {lis.index(i)}")
-            nofind=True
-    
-    if nofind:
-        print("No está la palabra")
-    
-    return 
+def esperaTecla():
+    #Muestra mensaje
+    print("Presiona una tecla para continuar")
+    #Espera a que el usuario presione una tecla
+    input()
 
-def RegistrarPeliculas():
+def Agregar():
    print("\n")
-   peliculas.append=input("Ingresa nombre de la pelicula: ").upper()
+   pelicula = input("Ingese la película: ")
+   peliculas.append(pelicula)
 
-print("\n\t..::: Almacen de pelicuklas :::... \n 1.- Consultar \n 2.- Agregar \n 3.-Eliminar \n 5.- SALIR")
-opcion = input("Elige una opción: ").lower()
-print("")
+opcion= 1
+
+while opcion != 4:
+    print("\n\t..::: Almacen de pelicuklas :::... \n 1.- Consultar \n 2.- Agregar \n 3.- Eliminar \n 4.- SALIR")
+    opcion = int(input("Elige una opción: ").lower())
+
+    if opcion == 1:
+        for i in peliculas:
+            print(f"{peliculas.index()+1}. {i}")
+        esperaTecla()
+    elif opcion == 2:
+        Agregar()
+    elif opcion == 4:
+        print("Hasta luego :D")
+        break

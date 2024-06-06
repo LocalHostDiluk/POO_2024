@@ -9,8 +9,7 @@ def buscar(lis, buscarPal):
     
     return
 
-def RegistrarPeliculas():
+def Agregar():
    print("\n")
-   peliculas=[]
-   peliculas.append=input("Ingresa nombre de la pelicula: ").upper()
-   return print("Agregado con éxito")
+   pelicula = input("Ingese la película: ")
+   peliculas.append(pelicula)

@@ -1,5 +1,5 @@
 import os
-from varias_funciones import *
+from FuncionesCalcu import *
 # def solicitarDatos():
 #    print("\n")
 #    global n1,n2,ope
