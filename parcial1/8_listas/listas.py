@@ -119,5 +119,3 @@ def RegistrarPeliculas():
 print("\n\t..::: Almacen de pelicuklas :::... \n 1.- Consultar \n 2.- Agregar \n 3.-Eliminar \n 5.- SALIR")
 opcion = input("Elige una opción: ").lower()
 print("")
-
-
