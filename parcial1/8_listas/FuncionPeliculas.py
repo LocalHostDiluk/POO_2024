@@ -1,15 +1,28 @@
-def buscar(lis, buscarPal):
-    for i in lis:
-        if buscarPal == i:
-            print(f"Si está la palabra {i}. Está en la posición {lis.index(i)}")
-            nofind=True
-    
-    if nofind:
-        print("No está la palabra")
-    
-    return
+peliculas = []
+def esperaTecla():
+    #Muestra mensaje
+    print("Presiona una tecla para continuar")
+    #Espera a que el usuario presione una tecla
+    input()
+
+def buscar():
+    print("Las películas registradas son: \n")
+    for i in peliculas:
+        print(f"{peliculas.index(i)+1}.- {i}\n")
 
 def Agregar():
-   print("\n")
-   pelicula = input("Ingese la película: ")
-   peliculas.append(pelicula)
+    pelicula = input("Ingese la película: ")
+    peliculas.append(pelicula)
+    print("\n Película agregada con éxito \n")
+
+def eliminar():
+    nofind=True
+    buscarPel = input("Ingrese la película a borrar: ")
+    for i in peliculas:
+        if buscarPel == i:
+            peliculas.pop(peliculas.index(i))
+            print("Se eliminó con éxito la película \n")
+            nofind=False
+    
+    if nofind:
+        print("No está la película")

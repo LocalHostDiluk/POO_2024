@@ -34,23 +34,23 @@ lis=["hola","dos","vallejin","popo"]
 buscarPal=input("Ingresa la palabra a buscar: ")
 
 nofind=True
-# for i in lis:
-#     if buscarPal == i:
-#         print(f"Si está la palabra {i}. Está en la posición {lis.index(i)}")
-#         nofind=True
-
-# if nofind:
-#     print("No está la palabra")
-
-i=0
-while i <= len(lis)-1:
-    if buscarPal == lis[i]:
-        print(f"La palabra {buscarPal} esta en la posición {i}")
-        nofind=False
-    i+=1
+for i in lis:
+    if buscarPal == i:
+        print(f"Si está la palabra {i}. Está en la posición {lis.index(i)}")
+        nofind=True
 
 if nofind:
     print("No está la palabra")
+
+# i=0
+# while i <= len(lis)-1:
+#     if buscarPal == lis[i]:
+#         print(f"La palabra {buscarPal} esta en la posición {i}")
+#         nofind=False
+#     i+=1
+
+# if nofind:
+#     print("No está la palabra")
 
 os.system("cls")
 
@@ -100,31 +100,55 @@ Notas:
 """
 
 from FuncionPeliculas import *
-peliculas = []
+# peliculas = []
 
-def esperaTecla():
-    #Muestra mensaje
-    print("Presiona una tecla para continuar")
-    #Espera a que el usuario presione una tecla
-    input()
+# def esperaTecla():
+#     #Muestra mensaje
+#     print("Presiona una tecla para continuar")
+#     #Espera a que el usuario presione una tecla
+#     input()
 
-def Agregar():
-   print("\n")
-   pelicula = input("Ingese la película: ")
-   peliculas.append(pelicula)
+# def buscar():
+#     print("Las películas registradas son: \n")
+#     for i in peliculas:
+#         print(f"{peliculas.index(i)+1}.- {i}\n")
+
+# def Agregar():
+#     pelicula = input("Ingese la película: ")
+#     peliculas.append(pelicula)
+#     print("\n Película agregada con éxito \n")
+
+# def eliminar():
+#     nofind=True
+#     buscarPel = input("Ingrese la película a borrar: ")
+#     for i in lis:
+#         if buscarPel == i:
+#             peliculas.pop(lis.index(i))
+#             print("Se eliminó con éxito la película")
+#             nofind=True
+    
+#     if nofind:
+#         print("No está la palabra")
+
 
 opcion= 1
-
 while opcion != 4:
-    print("\n\t..::: Almacen de pelicuklas :::... \n 1.- Consultar \n 2.- Agregar \n 3.- Eliminar \n 4.- SALIR")
-    opcion = int(input("Elige una opción: ").lower())
+    os.system("cls")
+    print("\n..::: Almacen de pelicuklas :::... \n 1.- Consultar \n 2.- Agregar \n 3.- Eliminar \n 4.- SALIR")
+    opcion = input("Elige una opción: ").lower()
 
-    if opcion == 1:
-        for i in peliculas:
-            print(f"{peliculas.index()+1}. {i}")
+    if opcion == "1":
+        buscar()
         esperaTecla()
-    elif opcion == 2:
+    elif opcion == "2":
         Agregar()
-    elif opcion == 4:
+        esperaTecla()
+    elif opcion == "3":
+        eliminar()
+        esperaTecla()
+    elif opcion == "4":
         print("Hasta luego :D")
         break
+    else:
+        print("La opción no es válida. Pruebe con otra.")
+        esperaTecla()
