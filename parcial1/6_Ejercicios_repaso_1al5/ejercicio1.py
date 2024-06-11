@@ -7,4 +7,3 @@ pais = "México" #Tipo de dato: String
 continente = "América" #Tipo de dato: String
 
 print(f"{pais} está en {continente}")
-
