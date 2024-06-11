@@ -16,6 +16,3 @@ print(personas)
 
 personas.remove("Ramiro")
 print(personas)
-
-
-

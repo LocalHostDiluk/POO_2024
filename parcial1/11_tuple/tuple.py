@@ -9,14 +9,11 @@
   °Una tupla es una colección ordenada e inmutable.
   °Las tuplas se escriben entre paréntesis.
 """
-
 tupla1 = ("apple", "banana", "cherry")
 print(tupla1)
 
-
 tupla2 = ("abc", 34, True, 40, "male")
 print(tupla2)
-
 
 # Metodos de tuplas
 # count()	Returns the number of times a specified value occurs in a tuple

@@ -68,8 +68,3 @@ print(f"La suma es: {resultado_suma}")
 
 # Ejemplo 6 Crear un programa que solicite a traves de una funcion la siguiente informacion: Nombre del Paciente, 
 # Edad, Estatura, Tipo de Sangre. Utilizar los 4 tipos de funciones
-
-
-
-
-

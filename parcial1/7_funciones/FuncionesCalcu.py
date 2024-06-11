@@ -1,10 +1,10 @@
 def solicitarDatos():
-   print("\n")
-   #global n1,n2,ope
-   n1=int(input("Numero #1: "))
-   n2=int(input("Numero #2: "))
-   ope=input("Operacion: ").upper()
-   return n1,n2, ope
+    print("\n")
+    #global n1,n2,ope
+    n1=int(input("Numero #1: "))
+    n2=int(input("Numero #2: "))
+    ope=input("Operacion: ").upper()
+    return n1,n2, ope
 
 def getCalculadora(num1,num2,operacion):
     if operacion=="1" or operacion=="+" or operacion=="SUMA":
