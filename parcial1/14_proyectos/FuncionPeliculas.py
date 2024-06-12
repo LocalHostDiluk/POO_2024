@@ -27,3 +27,20 @@ def eliminar():
     
     if nofind:
         print("No está la película")
+
+def actualizar():
+    buscarPel = input("Ingrese la película a actualizar: ")
+    for i in peliculas:
+        if buscarPel == i:
+            nueva = input("Ingrese la nueva pelicula: ")
+            peliculas.insert(i.index(),nueva)
+            break  # Salimos del bucle una vez actualizada la película
+
+def buscar1():
+    buscarPel = input("Ingrese la película a buscar: ")
+    for i in peliculas:
+        if buscarPel == i:
+            print(i)
+
+def vaciar():
+    peliculas.clear()
